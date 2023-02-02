@@ -1,0 +1,29 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .title {
+    width: 100%;
+  }
+
+  textarea{
+    height:100%;
+  }
+  mat-form-field{
+    width: 100%;
+    font-size: 15px;
+  }
+  mat-toolbar{
+    margin-top: 0.5vw;
+    height:60px;
+    background-color:#0e445dd8;
+    width: 100%;
+    margin-bottom: 2%;
+    color: rgba(241, 235, 235, 0.85);
+}
+.container{
+  background-color: transparent;
+  background-image: url('../../assets/blue.png');
+  }

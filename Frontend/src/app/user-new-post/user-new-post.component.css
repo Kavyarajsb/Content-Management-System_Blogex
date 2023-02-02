@@ -1,0 +1,71 @@
+.toolbar {
+    background-color: #0e445dd8;
+    width: 100%;
+    height: 60px;
+    color: rgba(241, 235, 235, 0.85);
+  }
+  .bu {
+    background-color: #1f769b00;
+  }
+  .container {
+    margin-top: 0.5vw;
+    display: flex;
+    background-color: transparent;
+    background-image: url('../../assets/blue.png');
+  }
+  @media screen and (max-width: 800px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      min-width: 100%;
+    }
+    .tool,
+    .posts {
+      min-width: 100%;
+    }
+    mat-card,
+    .mat-chip {
+      min-width: 100%;
+    }
+  }
+  .posts {
+    width: 80%;
+    margin-right: 10px;
+   
+  }
+  .categories {
+    width: 20%;
+  }
+  mat-chip {
+    width: 150px;
+    
+  }
+  .displayYourPost:hover {
+    transform: scale(1.02);
+  }
+  .des {
+    max-width: 100px;
+    min-width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .displayYourPost .u {
+    display: none;
+    
+  }
+  
+  .displayYourPost:hover .u {
+    display: block;
+  }
+  .displayYourPost {
+    margin-bottom: 1%;
+  }
+  .mat-chip.mat-standard-chip {
+    background-color: #177e89;
+    color: rgb(255, 255, 255);
+  }
+   
+
+    

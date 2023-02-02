@@ -1,0 +1,61 @@
+<section class="text">
+ 
+  <div class="p-1 bg-image" style="
+        background-image: url('../../../assets/green.png');
+        height: 300px;
+        ">
+        <a href="#!" class="text-body">
+          <img src="../../../assets/Logo2.png" class="new1"  style=" height: 60px; width: 8rem; margin: 3px; margin-left: 20px;">
+        </a>
+        
+        </div>
+        
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="fw-bold mb-5" style="font-size: 2rem; text-align: center;">Sign up now</h2>
+
+          <form [formGroup]='form' (ngSubmit)=" adduser()">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="form3Example1" placeholder="First Name" formControlName="firstname" class="form-control" />
+                </div> 
+              </div>  
+              
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="form3Example2" placeholder="Last Name" formControlName="lastname" class="form-control" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="email" id="form3Example3" placeholder="Email Address" formControlName="email" class="form-control" />
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="form3Example4" placeholder="Password" formControlName="password" class="form-control" />
+            </div>
+
+
+            <button type="submit" class="btn btn-primary btn-block mb-4" style="width: 100%;">
+              Sign up
+            </button>
+            <p>Already have an account? <a href="login" class="link-info">Login here</a></p>
+          </form>
+
+          
+          
+            
+            
+  
+    
+    

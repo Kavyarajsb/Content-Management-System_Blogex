@@ -1,0 +1,59 @@
+<!-- Section: Design Block -->
+<section class="text">
+  <!-- Background image -->
+  <div class="p-1 bg-image" style="
+        background-image: url('../../../assets/green.png');
+        height: 300px;
+        ">
+        <a href="#!" class="text-body">
+          <img src="../../../assets/Logo2.png" class="new1" style=" height: 60px; width: 8rem; margin: 3px; margin-left: 20px;">
+        </a>
+        </div>
+        
+  <!-- Background image -->
+
+  <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 0%, 100%, 0.823);
+        backdrop-filter: blur(30px);
+        ">
+    <div class="card-body py-5 px-md-5">
+
+      <div class="row d-flex justify-content-center">
+          <div class="col-lg-4">
+            <h2 class="fw-bold mb-5" style="text-align: center; font-size: 2rem;">User Login</h2>
+
+           <form (ngSubmit)="userdata()" >
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email"  id="form2Example1" placeholder="Email address" [(ngModel)]="login.email" matInput name="email"  class="form-control" />
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password"  placeholder="Passsword" [(ngModel)]="login.password" name="password"  [type]="hide ? 'password' : 'text'"  id="form2Example2" class="form-control">
+             </div>
+  
+  
+  
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <!-- Checkbox -->
+                <div class="form-check mb-0">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                  <label class="form-check-label" for="form2Example3">
+                    Remember me
+                  </label>
+                </div>
+                <a href="#!" class="text-body">Forgot password?</a>
+              </div>
+  
+            <!-- Submit button -->
+            <button type="submit"  class="btn btn-primary btn-block mb-4" style="width: 100%;">Login</button>
+            <p>Don't have an account? <a href="signup" class="link-info">Sign Up here</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section: Design Block -->

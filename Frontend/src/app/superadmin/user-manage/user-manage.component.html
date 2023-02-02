@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="toolbar">
+    <mat-toolbar>
+      <span>MANAGE USERS</span>
+    </mat-toolbar>
+  </div>
+  <ng-container *ngFor="let item of users">
+    <div class="displayYourPost">
+      <mat-card fxLayout="row" fxLayoutAlign="space-around centre"  style="background-color: #e2e4e7ca;">
+        <mat-card-header>
+          <mat-card-title><button
+            mat-button
+            matTooltipHideDelay="200"
+            #tooltip="matTooltip"
+            matTooltip="you" class="btn1"
+          >
+            <mat-icon aria-hidden="false" aria-label="{2:label} icon"
+              >account_box</mat-icon>
+          </button>{{item.email}}</mat-card-title>
+          <div class="spacer"></div>
+          <button mat-flat-button  (click)="changePrivilage(item)"
+          matTooltip="Are you sure to remove user" class="btn2">
+            <mat-icon aria-hidden="false" aria-label="{2:label} icon"
+              >delete</mat-icon
+            >
+          </button>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </ng-container>
+</div>

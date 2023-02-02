@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="tool">
+      <p>
+        <mat-toolbar class="toolbar">
+          <span>BLOGS</span>
+          <span class="example-spacer"></span>
+        </mat-toolbar>
+      </p>
+    </div>
+    <div class="a">
+      <mat-expansion-panel style="background-color: #e2e4e7ca;">
+        <mat-expansion-panel-header>
+          <mat-panel-title style="color: black;">ADD NEW BLOGS</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-divider></mat-divider>
+  
+        <mat-divider></mat-divider>
+        <form (ngSubmit)="createpost()" class="example-form" >
+          <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input matInput name="title" [(ngModel)]="post.heading" />
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea rows="7" matInput name="description" [(ngModel)]="post.description" ></textarea>
+          </mat-form-field>
+  
+          <button type="submit" mat-flat-button class="create" style="background-color:  #DA621E; color: white; float: right; width: 120px;">
+            POST</button>
+        </form>
+      </mat-expansion-panel>
+    </div>
+  
+    <ng-container *ngFor="let item of posts">
+      <mat-card fxLayout="row" fxLayoutAlign="space-around centre" class="card" style="background-color: #e2e4e7ca;">
+        <mat-card-header>
+          <mat-card-title>{{ item.heading }}</mat-card-title>
+          <mat-card-subtitle class="des">{{item.description}}</mat-card-subtitle>
+        </mat-card-header>
+        <button routerLink="/admin/dashboard/singlePost" mat-button matTooltipHideDelay="200" #tooltip="matTooltip" matTooltip="view post">
+            <mat-icon (click)="preview(item._id)" class="u" aria-hidden="false" aria-label="{2:label} icon" >open_in_new</mat-icon >
+          </button>
+        <button matTooltipHideDelay="200"  #tooltip="matTooltip"  matTooltip="edit post" mat-icon-button
+            (click)="openDialog(item._id, item.heading, item.description)">
+            <mat-icon class="u" aria-hidden="false" aria-label="{2:label} icon" >edit</mat-icon >
+          </button>
+          <button (click)="delete(item._id)"  mat-button matTooltipHideDelay="200" #tooltip="matTooltip" matTooltip="delete Post">
+            <mat-icon class="u" aria-hidden="false" aria-label="{2:label} icon" >delete</mat-icon >
+          </button>
+          
+          <button mat-button matTooltipHideDelay="200" #tooltip="matTooltip" matTooltip="{{ item.email }}">
+            <mat-icon class="u" aria-hidden="false" aria-label="{2:label} icon" >account_box</mat-icon>
+          </button>
+      </mat-card>
+    </ng-container>
+  </div>
+  

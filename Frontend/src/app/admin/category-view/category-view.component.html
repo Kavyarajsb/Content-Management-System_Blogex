@@ -1,0 +1,33 @@
+<div class="container">
+    <mat-toolbar class="toolbar">
+        <span>CATEGORIES</span>
+        <span class="example-spacer"></span>
+    </mat-toolbar>
+ <ng-container *ngFor="let item of name">
+        <div class="ca" >
+        <mat-expansion-panel style="background-color: #e2e4e7ca;">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                   {{item.categoryTitle}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-divider></mat-divider>
+            <mat-panel-description style="padding: 16px;">{{item.description}}</mat-panel-description>
+            <mat-divider></mat-divider>
+            <br>
+            <button mat-stroked-button style="margin-left: 15px; background-color:  #DA621E; color: white;" 
+               (click)="onclick(item.categoryTitle)"  mat-button color="secondary" routerLink="/admin/dashboard/posts">
+                VIEW ALL POSTS</button>
+                <div style="float: right; ">
+                    <button mat-icon-button (click)="openDialog(item._id,item.categoryTitle,item.description)">
+                        <mat-icon class="" aria-label="label">edit</mat-icon>    
+                    </button>
+                    <button mat-icon-button (click)="delete(item.categoryTitle)">
+                        <mat-icon class="" aria-label="label">delete</mat-icon>    
+                    </button>
+                </div>    
+        </mat-expansion-panel>
+    </div>
+    </ng-container>
+    
+</div>

@@ -1,0 +1,45 @@
+<div >
+  <mat-toolbar  class="app-header" >
+    <img src="../../assets/Logo.png"  style=" height: 55px; width: 8rem; margin: 5px;">
+    <div class="spacer"></div>
+     <span class="nav-tool-items">
+      <a  mat-raised-button class="logout" style="font-size: 15px;" (click)="logout()">LOGOUT</a>
+     </span>
+  </mat-toolbar>
+</div>
+  <button mat-icon-button *ngIf="sidenav.mode ==='over'" (click)="sidenav.toggle()">
+    <mat-icon *ngIf="!sidenav.opened">
+     menu
+    </mat-icon>
+    <mat-icon *ngIf="sidenav.opened">
+    close
+    </mat-icon>
+</button>
+
+<mat-sidenav-container style="background-image: url('../../../assets/teal.png');">
+    <mat-sidenav #sidenav="matSidenav">
+        <mat-selection-list class="category" #shoes [multiple]="false">
+          <mat-list-option routerLink="/admin/dashboard">
+            <button mat-button class="menu-button">
+              <mat-icon>home</mat-icon>
+              <span>DASHBOARD</span>
+          </button>
+            </mat-list-option>
+            
+          <mat-list-option routerLink="createCategory">
+            <button mat-button class="menu-button">
+              <mat-icon>add_box</mat-icon>
+              <span>CREATE CATEGORY</span>
+          </button>
+          </mat-list-option>
+      </mat-selection-list>
+        <footer class="footer">
+            <a>© Copyright 2022 blogex</a>
+        </footer>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="outlet">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

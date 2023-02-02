@@ -1,0 +1,42 @@
+<div class="container">
+    <mat-toolbar>
+      <span>CREATE NEW BLOG</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+
+        <form style="background-color: #e2e4e7ca;" >
+        
+          <mat-form-field appearance="fill" >
+            <mat-label>Category</mat-label>
+            <mat-select  name="category" [(ngModel)]="data.category" required="">
+              <mat-option *ngFor="let item of category" value="{{item.categoryTitle}}">{{item.categoryTitle}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Title</mat-label>
+            <input
+            [(ngModel)]="data.heading"
+            name="heading"
+              matInput
+             
+              placeholder="Ex. 1 Main St, New York, NY"
+              required
+            />
+          </mat-form-field>
+          
+          <mat-form-field appearance="fill" >
+            <mat-label>Description</mat-label>
+            <textarea
+            [(ngModel)]="data.description" required
+            name="description"
+              rows="7"
+              matInput
+              placeholder="Ex. It makes me feel..."
+            ></textarea>
+          </mat-form-field>
+          
+          <button mat-stroked-button style="float: right; width: 10vw; background-color: #f56416; color: white; margin-top: 1vw;" (click)="create(data)">POST</button>
+        </form>
+  </div>
+  

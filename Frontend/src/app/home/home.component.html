@@ -1,0 +1,68 @@
+<mat-toolbar  class="app-header"  [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+  <img src="../../assets/Logo.png"  style=" height: 55px; width: 8rem; margin: 5px;">
+  
+    <div class="spacer"></div>
+    <span class="nav-tool-items">
+        <a mat-stroked-button routerLink="signup" class="signup" routerLinkActive="active">SIGNUP</a>
+        <a mat-stroked-button routerLink="loginopt" class="signup" routerLinkActive="active" (click)="openDialog()">LOGIN</a>
+    </span>
+</mat-toolbar>
+<section class="S1">
+  <div>
+    <header class="new">
+      <img src="../../assets/Logo2.png" style=" height: 60px; width: 8rem; margin: 3px; margin-left: 20px;">
+      <div class="spacer"></div>
+      <a mat-button routerLink="loginopt" class="sign" routerLinkActive="active" (click)="openDialog()">LOGIN</a>
+    </header>
+     <header class="caption">
+      <h1 style="font-size: 2rem;">Bring out your passions</h1>
+      <p>Share your voices in minutes</p>
+      <a mat-stroked-button routerLink="signup" class="login" routerLinkActive="active">LET'S GET STARTED</a>
+     </header>
+  </div>
+</section>
+
+<section class="S2">
+  <header class="caption1">
+    <h1 style="font-size: 2rem; padding-left: 1.9vw;">EASIEST WAY TO BLOG</h1>
+    <h2 style="font-weight: 200; padding-left: 1.6vw;">Create your unique and beautiful blogs</h2>
+    <img src="../../assets/blog.jpg" alt="" style="width: 24rem;">
+   </header> 
+</section>
+<footer class=" text-center" style="background-color: rgba(8, 8, 8, 0.2);"  >
+  <div class="container p-5 pb-0">
+    <section class="">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+            <p class="pt-2" style="font-size: 20px; color: rgb(0, 0, 0); font-weight: 300;">
+              <strong>Sign up for our newsletter</strong>
+            </p>
+          </div>
+          <div class="col-md-5 col-12">
+            <div class="form-outline mb-1">
+              <input type="email" id="form5Example27" placeholder="Email Address" class="form-control" />
+              
+            </div>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-1" style="background-color: #DA621E;">
+              Subscribe
+            </button>
+          </div>
+          <div class="text-center p-3">
+            © 2020 Copyright:
+            <a class="text-dark" href="#">Blogex</a>
+          </div>
+        </div>
+        
+      </form>
+    </section>
+   
+  </div>
+ 
+</footer>
+
+
+
+

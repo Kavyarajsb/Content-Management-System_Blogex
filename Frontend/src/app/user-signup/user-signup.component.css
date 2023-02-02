@@ -1,0 +1,40 @@
+.example-card{
+  max-width: 100%;
+  background-color: rgb(251, 250, 248);
+  margin: auto;
+  /* display: flex;
+  flex-direction: column; */
+}
+.container{
+padding: 10% 0% 10% 0%;
+}
+[class*='example-card'] {
+width: 80%;
+}
+@media  (min-width: 768px){
+.example-card {
+  width: 40%;
+}
+}
+
+.example-form {
+  min-width: 40%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.example-full-width,.email1 {
+  width: 100%;
+}
+
+td {
+  padding-right: 8px;
+}
+.name,.adr{
+  display: flex;
+  justify-content: space-between;
+  
+}
+.name1, .adr1{
+  width:45%;
+}

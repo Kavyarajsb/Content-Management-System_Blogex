@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="toolbar">
+      <mat-toolbar>
+        <span>YOUR BLOGS</span>
+      </mat-toolbar>
+    </div>
+    <ng-container *ngFor="let item of posts">
+      <div class="displayYourPost" >
+        <mat-card fxLayout="row" fxLayoutAlign="space-around centre" style="background-color: #e2e4e7ca; border: 1px solid rgba(233, 224, 224, 0.823);">
+          <mat-card-header>
+            <mat-card-title>{{item.heading}}</mat-card-title>
+            <mat-card-subtitle class="des">{{item.description}}</mat-card-subtitle>
+          </mat-card-header>
+   <mat-card-actions>
+    <button routerLink="/dashboard/singlePost"
+                mat-button
+                matTooltipHideDelay="200"
+                #tooltip="matTooltip"
+                matTooltip="view post"
+              >
+                <mat-icon (click)="preview(item._id)" class="u" aria-hidden="false" aria-label="{2:label} icon"
+                  >open_in_new</mat-icon
+                >
+              </button>
+            <button (click)="savePostid(item._id)" routerLink="/dashboard/editPost" mat-button matTooltipHideDelay="200" #tooltip="matTooltip"
+            matTooltip="edit Post">
+              <mat-icon class="u" aria-hidden="false" aria-label="{2:label} icon"
+                >edit</mat-icon
+              >
+            </button>
+            <button (click)="delete(item._id)" mat-button  matTooltipHideDelay="200" #tooltip="matTooltip"
+            matTooltip="delete Post">
+              <mat-icon class="u" aria-hidden="false" aria-label="{2:label} icon"
+                >delete</mat-icon
+              >
+            </button>
+            
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-container>
+    
+  </div>
+  

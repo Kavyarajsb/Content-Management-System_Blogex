@@ -1,0 +1,23 @@
+<div class="container">
+  <mat-toolbar>
+    <span>CREATE NEW CATEGORIES</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+      <form (ngSubmit)="createCategory()" class="example-form" style="background-color: #e2e4e7ca; padding: 30px;">
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Title</mat-label>
+              <input matInput name="title" [(ngModel)]="category.categoryTitle" required/>
+            </mat-form-field>
+  
+            <mat-form-field appearance="fill">
+              <mat-label>Description</mat-label>
+              <input matInput name="Description" [(ngModel)]="category.description" required />
+            </mat-form-field>
+
+            <button mat-stroked-button type="submit" style="float: right; width: 10vw; background-color: #f56416; color: white; margin-top: 2.5vw;">POST</button>
+  
+           
+      </form>
+    </div>
+  

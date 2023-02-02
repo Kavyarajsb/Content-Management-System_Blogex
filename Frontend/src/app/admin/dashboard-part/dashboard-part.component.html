@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="posts">
+    <div class="tool">
+      <p>
+        <mat-toolbar class="toolbar">
+          <span>LATEST BLOGS & UPDATES</span>
+          <span class="example-spacer"></span>
+        </mat-toolbar>
+      </p>
+    </div>
+      <ng-container *ngFor="let item of post">
+          <div class="displayYourPost" >
+            <mat-card fxLayout="row" fxLayoutAlign="space-around centre" style="background-color: #e2e4e7ca;">
+              <mat-card-header>
+                <mat-card-title>{{item.heading}}</mat-card-title>
+                <mat-card-subtitle class="des">{{item.description}}</mat-card-subtitle>
+              </mat-card-header>
+      
+              <mat-card-actions>
+                <button routerLink="/admin/dashboard/singlePost" mat-button matTooltipHideDelay="200" #tooltip="matTooltip" matTooltip="view post">
+                  <mat-icon (click)="preview(item._id)" class="u" aria-hidden="false" aria-label="{2:label} icon">open_in_new</mat-icon>
+                </button>
+                <button mat-button matTooltipHideDelay="200" #tooltip="matTooltip" matTooltip="{{item.email}}">
+                  <mat-icon class="u"aria-hidden="false" aria-label="{2:label} icon">account_box</mat-icon>
+                </button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </ng-container>
+      </div>
+        <mat-card style="background-color: #413d78c8; width: 20%;">
+          <mat-card-content>
+          <div class="tool">
+            <p>
+                <span style="font-size: 20px; color: white; font-weight: 500;" routerLink="viewCategory">CATEGORIES</span>
+                <span class="example-spacer"></span>
+                <mat-icon style="color: white; float: right;" routerLink="viewCategory">more_vert</mat-icon>
+            </p>
+          </div>
+          <ng-container *ngFor="let item of name">
+            <h2 (click)="onclick(item.categoryTitle)"style="padding-left: 15px; color: white; font-weight: 300;">
+                <mat-icon style="font-size: 20px;" >star_border</mat-icon>{{item.categoryTitle}}</h2>
+          </ng-container>
+      </mat-card-content>
+  </mat-card>
+  </div>
+  

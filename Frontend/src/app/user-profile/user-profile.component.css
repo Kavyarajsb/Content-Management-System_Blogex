@@ -1,0 +1,44 @@
+mat-toolbar{
+    height:60px;
+    background-color:#0e445dd8;
+    color:white;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 0.5vw;
+    color: rgba(241, 235, 235, 0.85);
+}
+.add{
+    color: rgb(220, 145, 24);  
+
+}
+.a{
+display: flex;
+}
+.displayYourPost .u{
+    display: none;
+} 
+
+.displayYourPost:hover .u{
+ 
+ display: block;
+ 
+}
+.displayYourPost:hover{
+     transform: scale(1.02); 
+  
+   }
+
+
+.displayYourPost{
+    margin-bottom: 8px;
+    text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+    }
+    .des{
+        max-width: 200px;
+        min-width: 100px;
+        text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+    }
+    .container{
+        background-color: transparent;
+        background-image: url('../../assets/blue.png');
+        }
